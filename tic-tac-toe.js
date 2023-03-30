@@ -1,30 +1,24 @@
 const gameBoard = (() => {
      const myGameBoard = [];
+     const turn = 0;
+
+     for(i = 0; i < 9; i++) {
+        myGameBoard.push("");
+     }
+ 
+     const squares = document.querySelector(".gameboard");
+
+     myGameBoard.forEach((item, index) => {
+        const square = document.createElement("div");
+        square.className = "square";
+        squares.appendChild(square);
+     })
+   
+
 })();
 
-const player = (name, symbol) => ({name , symbol});
+const player = (name, symbol) => ({name, symbol});
 
-const player1 = player("Player X", "X");
-const player2 = player("Player O", "O");
-
-const gamePlay = () => {
-
-}
-
-
-const createGameBoard = function () {
-    const boardDisplay = document.getElementsByClassName("gameboard");
-
-    for( let i = 0; i < 9; i++) {
-        const square = boardDisplay.createElement("div");
-        square.classList.add("square");
-        boardDisplay.appendChild(square);
-
-        
-
-
-    }
-}
-
- 
+const player1 = player("Player1", "X");
+const player2 = player("Player2", "O");
 
